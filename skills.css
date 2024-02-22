@@ -1,0 +1,59 @@
+*{
+    /* margin: 0; */
+padding: 0;
+box-sizing: border-box;
+/* text-decoration: none; */
+/* border: none; */
+/* outline: none;/ */
+scroll-behavior: smooth;
+font-family:'Times New Roman', Times, serif;
+
+}
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+--text-color:#fff;
+--main-color:#0ef;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+#skills h3{
+    font-size: 4rem;
+    align-items: center;
+text-align: center;
+}
+#skills h4{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+#skills p{
+    font-size: 2rem;
+}
+#skills ul{
+    font-size: 2rem;
+    line-height: 7rem;
+    list-style: disc;   
+    
+}
+#skills h2{
+    font-size: 4rem;
+    align-items: center;
+text-align: center;
+}
+#skills h5{
+    font-size: 3rem;
+   
+}
