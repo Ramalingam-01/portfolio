@@ -507,7 +507,7 @@ flex-direction: column-reverse;
     font-size:55px ;
 }
   .info {
-    padding-top: 150px;
+    padding-top: 100px;
   width: 100%;
   height: 68rem;
   background: var(--second-bg-color);
@@ -532,7 +532,7 @@ flex-direction: column-reverse;
 
 }
 .address{
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
  .info h4 {
