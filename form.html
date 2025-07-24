@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Details</title>
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+fieldset {
+	
+	width: 800x;
+	height: 939px;
+	background-size: cover;
+	background-color: blueviolet;
+	display: flex;
+}
+
+form {
+	margin-top: -22px;
+	font-size: 30px;
+	padding-left: 266px;
+	color: black;
+}
+
+.error{
+color:red;
+}
+
+
+
+
+
+
+table {
+	margin-top: -35px;
+	margin-left: -255px;
+}
+
+
+
+input {
+	height: 47px;
+	width: 400px;
+	border-bottom: 2px solid black;
+	border-top: none;
+	border-left: none;
+	font-size: 20px;
+	letter-spacing: 2px;
+	background: transparent;
+	border-right: none;
+	color: Black;
+	font-weight: 900px;
+}
+
+::placeholder {
+	color: black;
+}
+
+input:focus {
+	outline: none;
+}
+
+h1 {
+	padding-top: 25px;
+	padding-left: 227px;
+}
+
+button {
+	height: 62px;
+	width: 659px;
+	margin-left: -211px;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 6px;
+	background-color: blueviolet;
+	
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+#gen {
+	height: 20px;
+	width: 20px;
+}
+
+#gen2 {
+	height: 20px;
+	width: 20px;
+	margin-left: -290px;
+}
+
+#form1 {
+	height: 850px;
+	width: 42%;
+	background-color: white;
+	margin-top: 30px;
+	margin-left: 70px;
+	border-radius: 10px;
+}
+
+#button {
+	border-bottom: none;
+	color: white;
+}
+
+h3 {
+	font-size: 25px;
+	
+}
+
+#right{
+height: 850px;
+	width: 40%;
+	background-color: red;
+	margin-left: 182px;
+	margin-top: 30px;
+		border-radius: 10px;
+		background-color: blueviolet;
+	
+	
+}
+#right h1{
+font-size: 97px;
+padding-top: 302px;
+padding-left: 103px;
+color: white;
+
+}
+#form1 h6 span{
+margin-left: 40px;
+
+font-size: 30px;
+}
+</style>
+</head>
+<body>
+	<fieldset style="color: black";>
+
+
+		<div id="form1">
+			<h1>EMPLOYEE DETAILS</h1>
+<h6><td><span id="Eerror" class="error"></span></td></h6>
+			<form action="sigin" method="post" onsubmit="return validateForm()">
+				<table cellspacing="30px">
+
+					<tr>
+						<td><label for="Empname">Employee Name</label></td>
+						<td>: <input type="text" name="Empname" id="Empname"
+							placeholder="Enter your name" autofocus="on"></td>
+							
+							
+					</tr>
+
+					<tr>
+						<td><label for="DateofBirth">Date of Birth</label></td>
+						<td>: <input type="date" name="DateofBirth" id="DateofBirth"
+							style="color: black"></td>
+					</tr>
+
+					<tr>
+						<td><label for="gen">Gender</label></td>
+						<td>: <input type="radio" name="Gender" id="gen" value="male">
+							Male
+						</td>
+						<td><input type="radio" name="Gender" id="gen2"
+							value="Female"> Female</td>
+					</tr>
+					<tr>
+						<td><label for="Email">Email</label></td>
+						<td>: <input type="email" name="Email" id="Email"
+							placeholder="Enter your Email"></td>
+					</tr>
+					<tr>
+						<td><label for="Phone">Phone</label></td>
+						<td>: <input type="tel" name="Phone" id="Phone"
+							placeholder="Enter your Mobile number" minlength="0"
+							maxlength="10"></td>
+
+					</tr>
+
+
+					<tr>
+						<td><label for="Address">Address</label></td>
+						<td>: <input type="Address" name="Address" id="Address"
+							placeholder="Enter your Address"></td>
+
+					</tr>
+					<br>
+					<tr>
+						<td><label for="Role">Role</label></td>
+						<td>: <input type="Role" name="Role" id="Role"
+							placeholder="Enter your Role" required="true"></td>
+					</tr>
+					<br>
+					<tr>
+						<td><label for="Salary">Salary</label></td>
+						<td>: <input type="text" name="Salary" id="Salary"
+							placeholder="Enter your Salary" ></td>
+					</tr>
+
+				</table>
+				<button>
+					<h3>
+						<input type="submit" id="button">
+					</h3>
+				</button>
+
+
+			</form>
+		</div>
+		<div id="right">
+		
+		<h1>EMPLOYEE <br> DETAILS</h1>
+		</div>
+	</fieldset>
+
+
+	<script>
+	
+
+	
+		function validateForm() {
+
+		
+			var EmpnameInput = document.getElementById("Empname");
+			var Empname = EmpnameInput.value;
+			enameerror=document.getElementById("Eerror");
+			// name validation
+			if (Empname.trim() === "") {
+				//alert("Please Enter Your Name");
+				enameerror.innerHTML="Please Enter Your Name "
+				return false;
+			}
+
+			var emailInput = document.getElementById("Email");
+			var email = emailInput.value;
+
+			// Email validation
+			if (email.trim() === "") {
+				//alert("Enter your Email address");
+				enameerror.innerHTML="Please Enter Your Email "
+
+				return false;
+			}
+
+			var phoneInput = document.getElementById("Phone");
+			var phone = phoneInput.value;
+
+			// Phone validation
+			if (phone.trim() === "") {
+				//alert("Enter your mobile number");
+				enameerror.innerHTML="Please Enter Your Mobile Number "
+				return false;
+			}
+
+			var dobInput = document.getElementById("DateofBirth");
+			var dob = dobInput.value;
+
+			// Date of Birth validation
+			var currentDate = new Date().toISOString().split('T')[0]; // Get the current date
+			if (dob > currentDate) {
+				//alert("Please provide valid Date Of Birth");
+				
+				enameerror.innerHTML="Please provide valid Date of Birth "
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+
+</body>
+</html>
