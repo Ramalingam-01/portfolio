@@ -58,7 +58,7 @@ ScrollReveal().reveal('.home-content h1,.about-img',{ origin: 'left'});
 ScrollReveal().reveal('.home-content p,.about-content',{ origin: 'left'});
 
 const typed = new Typed('.multiple-text',{
-    strings:['Fullstack Developer','Frontend Developer','Java Developer'],
+    strings:['Full Stack Developer','Frontend Developer','Java Developer'],
     typeSpeed:100,
     backSpeed:100,
     backDelay: 1000,
